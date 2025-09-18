@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.calculadora"
+    namespace = "com.example.topo"
     compileSdk = 36
 
     defaultConfig {
