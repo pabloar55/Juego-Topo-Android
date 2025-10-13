@@ -8,6 +8,136 @@
     android:background="@drawable/fondo"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/topera3"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="260dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/topera2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/topera" />
+
+    <ImageView
+        android:id="@+id/topera9"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toEndOf="@+id/topera8"
+        app:layout_constraintTop_toBottomOf="@+id/topera6"
+        app:srcCompat="@drawable/topera" />
+
+    <ImageView
+        android:id="@+id/topera6"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toEndOf="@+id/topera5"
+        app:layout_constraintTop_toBottomOf="@+id/topera3"
+        app:srcCompat="@drawable/topera" />
+
+    <ImageView
+        android:id="@+id/topera10"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topera7"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/topera" />
+
+    <ImageView
+        android:id="@+id/topera8"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/topera7"
+        app:layout_constraintTop_toBottomOf="@+id/topera5"
+        app:srcCompat="@drawable/topera" />
+
+    <ImageView
+        android:id="@+id/topera1"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="260dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/topera" />
+
+    <ImageView
+        android:id="@+id/topera2"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="260dp"
+        app:layout_constraintStart_toEndOf="@+id/topera1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/topera" />
+
+    <ImageView
+        android:id="@+id/topera4"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topera1"
+        app:srcCompat="@drawable/topera" />
+
+    <ImageView
+        android:id="@+id/topera12"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.84"
+        app:layout_constraintStart_toEndOf="@+id/topera11"
+        app:layout_constraintTop_toBottomOf="@+id/topera9"
+        app:layout_constraintVertical_bias="0.096"
+        app:srcCompat="@drawable/topera" />
+
+    <ImageView
+        android:id="@+id/topera11"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/topera10"
+        app:layout_constraintTop_toBottomOf="@+id/topera8"
+        app:layout_constraintVertical_bias="0.096"
+        app:srcCompat="@drawable/topera" />
+
+    <ImageView
+        android:id="@+id/topera5"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toEndOf="@+id/topera4"
+        app:layout_constraintTop_toBottomOf="@+id/topera2"
+        app:srcCompat="@drawable/topera" />
+
+    <ImageView
+        android:id="@+id/topera7"
+        android:layout_width="86dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topera4"
+        app:srcCompat="@drawable/topera" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -18,23 +148,23 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/numero"
-        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.203" />
 
     <TextView
         android:id="@+id/numero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="140dp"
+        android:layout_marginEnd="144dp"
         android:text="0"
         android:textColor="#000000"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
+        app:layout_constraintVertical_bias="0.203" />
 
     <ImageButton
         android:id="@+id/play"
@@ -45,25 +175,44 @@
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.841"
         app:srcCompat="@android:drawable/ic_media_play" />
 
     <ImageButton
-        android:id="@+id/imageButton1"
-        android:layout_width="54dp"
-        android:layout_height="74dp"
+        android:id="@+id/topo"
+        android:layout_width="95dp"
+        android:layout_height="90dp"
         android:backgroundTint="#003F3F3F"
         android:contentDescription="imagen de un topo"
         android:padding="0dp"
-        android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.018"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.245"
+        app:layout_constraintVertical_bias="0.154"
         app:srcCompat="@drawable/topo" />
+
+    <ImageButton
+        android:id="@+id/topoaturdido"
+        android:layout_width="95dp"
+        android:layout_height="90dp"
+        android:backgroundTint="#003F3F3F"
+        android:contentDescription="imagen de un topo aturdido"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/topoaturdido" />
+
+    <androidx.constraintlayout.widget.Group android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

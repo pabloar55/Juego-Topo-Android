@@ -2,10 +2,9 @@ package com.example.topo;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.DisplayMetrics;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -14,11 +13,28 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    private ImageButton imageButton1;
+    private ImageButton topo;
+    private ImageButton topoaturdido;
     private TextView numero;
     private ImageButton play;
+    private ImageView topera1;
+    private ImageView topera2;
+    private ImageView topera3;
+    private ImageView topera4;
+    private ImageView topera5;
+    private ImageView topera6;
+    private ImageView topera7;
+    private ImageView topera8;
+    private ImageView topera9;
+    private ImageView topera10;
+    private ImageView topera11;
+    private ImageView topera12;
+    private ArrayList<ImageView> toperas;
+    int[] posicionTopo = new int[2];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,25 +46,55 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        imageButton1 = findViewById(R.id.imageButton1);
+        topera1 = findViewById(R.id.topera1);
+        topera2 = findViewById(R.id.topera2);
+        topera3 = findViewById(R.id.topera3);
+        topera4 = findViewById(R.id.topera4);
+        topera5 = findViewById(R.id.topera5);
+        topera6 = findViewById(R.id.topera6);
+        topera7 = findViewById(R.id.topera7);
+        topera8 = findViewById(R.id.topera8);
+        topera9 = findViewById(R.id.topera9);
+        topera10 = findViewById(R.id.topera10);
+        topera11 = findViewById(R.id.topera11);
+        topera12 = findViewById(R.id.topera12);
+        toperas = new ArrayList<>();
+        toperas.add(topera1);
+        toperas.add(topera2);
+        toperas.add(topera3);
+        toperas.add(topera4);
+        toperas.add(topera5);
+        toperas.add(topera6);
+        toperas.add(topera7);
+        toperas.add(topera8);
+        toperas.add(topera9);
+        toperas.add(topera10);
+        toperas.add(topera11);
+        toperas.add(topera12);
+        topo = findViewById(R.id.topo);
+        topoaturdido = findViewById(R.id.topoaturdido);
         numero = findViewById(R.id.numero);
-        imageButton1.setOnClickListener(this);
-        imageButton1.setVisibility(View.INVISIBLE);
-        numero.setOnClickListener(this);
+        topo.setOnClickListener(this);
+        topo.setVisibility(View.INVISIBLE);
+        topoaturdido.setVisibility(View.INVISIBLE);
         play= findViewById(R.id.play);
         play.setOnClickListener(this);
     }
 
     public void onClick(View view) {
         int id = view.getId();
-        if (id == imageButton1.getId()) {
+        if (id == topo.getId()) {
+            topoaturdido.setX(posicionTopo[0]);
+            topoaturdido.setY(posicionTopo[1]);
+            topoaturdido.setVisibility(View.VISIBLE);
+            topo.setVisibility(View.INVISIBLE);
             int i = Integer.parseInt((String) numero.getText())+1;
             CharSequence texto = String.valueOf(i);
             numero.setText(texto);
         }
         if(id== play.getId()){
             play.setVisibility(View.INVISIBLE);
-            imageButton1.setVisibility(View.VISIBLE);
+            topo.setVisibility(View.VISIBLE);
             resetCounter();
             startMovingButton();
         }
@@ -58,30 +104,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         CountDownTimer crono = new CountDownTimer(25000, 1000) {
             @Override
             public void onFinish() {
-                imageButton1.setVisibility(View.INVISIBLE);// Ocultarlo al final
+                topo.setVisibility(View.INVISIBLE);
+                topoaturdido.setVisibility(View.INVISIBLE);// Ocultarlo al final
                 play.setVisibility(View.VISIBLE);
             }
-
             @Override
             public void onTick(long millisUntilFinished) {
-                imageButton1.setVisibility(View.INVISIBLE); // Ocultamos
-                moveButtonToRandomPosition();               // Movemos
-                imageButton1.setVisibility(View.VISIBLE);   // Mostramos
+                topo.setVisibility(View.INVISIBLE);
+                topoaturdido.setVisibility(View.INVISIBLE);
+                mueveTopo();                        // Movemos
+                topo.setVisibility(View.VISIBLE);
+                // Mostramos
             }
         };
         crono.start();
     }
 
-    private void moveButtonToRandomPosition() {
-        WindowManager wm = getWindowManager();
-        DisplayMetrics metrics = new DisplayMetrics();
-        wm.getDefaultDisplay().getMetrics(metrics);
-        int maxX = metrics.widthPixels-imageButton1.getWidth();
-        int maxY = metrics.heightPixels-imageButton1.getHeight();
-        double randomX = Math.random()*maxX;
-        double randomY = Math.random()*maxY;
-        imageButton1.setX((float) randomX);
-        imageButton1.setY((float) randomY);
+    private void mueveTopo() {
+        int numeroRamdom = (int) (Math.random()*12);
+        toperas.get(numeroRamdom).getLocationOnScreen(posicionTopo);
+        topo.setX((float) posicionTopo[0]);
+        topo.setY((float) posicionTopo[1]);
     }
     private void resetCounter(){
         numero.setText("0");
