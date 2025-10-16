@@ -1,4 +1,4 @@
-package com.example.topo;
+package com.pabloarmas.topo;
 
 import org.junit.Test;
 

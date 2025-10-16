@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.topo"
+    namespace = "com.pabloarmas.topo"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.topo"
+        applicationId = "com.pabloarmas.topo"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
